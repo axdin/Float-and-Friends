@@ -1,0 +1,26 @@
+.Sky {
+    height: 100%;
+    width: 100%;
+}
+
+.LampBlock {
+    
+}
+
+.Friends {
+
+}
+
+.CloudLayerFront {
+    position: absolute;
+    top: 0;
+    height: 70%;
+    z-index: 3;
+}
+
+.CloudLayerBehind {
+    position: absolute;
+    top: 0;
+    height: 80%;
+    z-index: 1;
+}
