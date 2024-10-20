@@ -1,0 +1,12 @@
+.CharacterContainer {
+    position: absolute;
+}
+
+.CharacterIdle {
+    width: 200px;
+    height: auto;
+}
+
+.DialogueContainer {
+    
+}

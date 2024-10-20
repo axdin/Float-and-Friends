@@ -8,14 +8,17 @@
 }
 
 .Friends {
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
 }
 
 .CloudLayerFront {
     position: absolute;
     top: 0;
     height: 70%;
-    z-index: 3;
+    z-index: 4;
 }
 
 .CloudLayerBehind {

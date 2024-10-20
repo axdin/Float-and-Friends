@@ -18,6 +18,7 @@ function Lamp() {
             <div className="ClickableContainer">
                 <button className="Clickable" onClick={goToPost}/>
             </div>
+            
         </div>
     );
 }
