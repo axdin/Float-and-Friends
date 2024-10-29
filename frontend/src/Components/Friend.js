@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 
+import FriendInteraction from "./FriendInteraction";
+
 import Star from "../Assets/Friends/Idle-Star.gif";
 import Halo from "../Assets/Friends/Idle-Halo.gif";
+import Bear from "../Assets/Friends/Idle-Bear.gif";
 
 import "../Styles/Friend.css";
 
@@ -10,6 +13,7 @@ function Friend({ name, pos, dialogue }) {
     const [y, setY] = useState(0);
     const [idle, setIdle] = useState({});
     const [speaking, setSpeaking] = useState(false);
+    const [interacting, setInteracting] = useState(false);
 
     useEffect(() => {
         switch(name) {
@@ -18,6 +22,9 @@ function Friend({ name, pos, dialogue }) {
                 break;
             case "Halo":
                 setIdle(Halo);
+                break;
+            case "Bear":
+                setIdle(Bear);
                 break;
             default:
                 break;
@@ -32,8 +39,11 @@ function Friend({ name, pos, dialogue }) {
         setSpeaking(true);
     }
     const dontSpeak = () => {
-        console.log("left");
         setSpeaking(false);
+    }
+
+    const handleClick = () => {
+        setInteracting(true);
     }
 
     return (
@@ -41,14 +51,16 @@ function Friend({ name, pos, dialogue }) {
             style={{transform: `translate(${x}px, ${y}px)`}}>
             <img src={idle} className="CharacterIdle"
                 onMouseEnter={speak}
-                onMouseLeave={dontSpeak}/>
-            {speaking ? 
+                onMouseLeave={dontSpeak}
+                onClick={handleClick}/>
+            {speaking && 
                 <div className="DialogueContainer">
                     <h2>{dialogue}</h2>
                 </div>
-                :
-                <div>
-
+            }
+            {interacting &&
+                <div className="InteractionContainer">
+                    <FriendInteraction name={name}/>
                 </div>
             }
         </div>
