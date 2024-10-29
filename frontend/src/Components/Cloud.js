@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 import cloudImg from "../Assets/Objects/Cloud.png"
 
