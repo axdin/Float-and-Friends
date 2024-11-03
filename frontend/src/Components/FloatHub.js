@@ -4,6 +4,8 @@ import Lamp from "./Lamp";
 import Friend from "./Friend";
 import CloudGroup from "./CloudGroup";
 
+import clouds from "../Assets/Backgrounds/clouds.gif";
+
 import "../Styles/FloatHub.css"
 
 function FloatHub () {
@@ -12,6 +14,7 @@ function FloatHub () {
     return (
         <div>
             <div className="Sky">
+                <img src={clouds} className="Clouds"/>
                 <div className="LampBlock">
                     <Lamp/>
                 </div>
@@ -20,12 +23,12 @@ function FloatHub () {
                     <Friend name="Halo" pos={[10,350]} dialogue="You look nice, what's your name? :~)"/>
                     <Friend name="Star" pos={[700, 40]} dialogue="HII LET'S BE FRIENDS!!"/>
                 </div>
-                <div className="CloudLayerBehind">
+                {/* <div className="CloudLayerBehind">
                     <CloudGroup inFront={false}/>
                 </div>
                 <div className="CloudLayerFront">
                     <CloudGroup inFront={true}/>
-                </div>
+                </div> */}
             </div>           
         </div>
     );

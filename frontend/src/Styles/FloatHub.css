@@ -3,8 +3,10 @@
     width: 100%;
 }
 
-.LampBlock {
-    
+.Clouds {
+    width: 100%;
+    height: auto;
+    opacity: 60%;
 }
 
 .Friends {
