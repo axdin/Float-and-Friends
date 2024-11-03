@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import FriendInteraction from "./FriendInteraction";
+import FriendGreeting from "./FriendGreeting";
 
 import Star from "../Assets/Friends/Idle-Star.gif";
 import Halo from "../Assets/Friends/Idle-Halo.gif";
@@ -70,8 +71,8 @@ function Friend({ name, pos, dialogue }) {
                 onClick={startInteraction}
                 style={{transform: `translate(${x}px, ${y}px)`}}/>
             {speaking && 
-                <div className="DialogueContainer">
-                    <h2>{dialogue}</h2>
+                <div className="DialogueContainer" style={{transform: `translate(${x + 150}px, ${y - 50}px)`}}>
+                    <FriendGreeting greeting={dialogue}/>
                 </div>
             }
             {interacting &&

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+import textbox from "../Assets/Objects/CloudTextBox.png";
+
 import "../Styles/FriendInteraction.css";
 
 function FriendInteraction({ name, contents, end }) {
@@ -17,21 +19,24 @@ function FriendInteraction({ name, contents, end }) {
     return (
         <div>
             <motion.div 
-                animate={{ y: -200 }} 
-                transition={{ duration: 2, ease: "linear" }}>
+                animate={{ y: -450 }} 
+                transition={{ duration: 1, ease: "linear" }}>
                     <div className="InteractionModal">
-                        <h3>
-                            {contents[current]}
-                        </h3>
-                        {current < (contents.length - 1) ? 
-                            <button onClick={handleClick}>
-                                Next
-                            </button>
-                            :
-                            <button onClick={end}>
-                                End
-                            </button>
-                        }                        
+                        <img src={textbox} className="Textbox"/>
+                        <div className="TextboxContents">
+                            <h1>
+                                {contents[current]}
+                            </h1>
+                            {current < (contents.length - 1) ? 
+                                <button onClick={handleClick}>
+                                    Next
+                                </button>
+                                :
+                                <button onClick={end}>
+                                    End
+                                </button>
+                            }    
+                        </div>                        
                     </div>
             </motion.div>
         </div>

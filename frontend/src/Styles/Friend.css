@@ -5,13 +5,15 @@
 }
 
 .CharacterIdle {
+    position: absolute;
     width: 200px;
     height: auto;
     cursor: pointer;
 }
 
 .DialogueContainer {
-    
+    position: absolute;
+    z-index: 5;
 }
 
 .InteractionContainer{
