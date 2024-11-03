@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FloatHub from "./Components/FloatHub";
 import Events from "./Components/Events";
 import MessageBoard from "./Components/MessageBoard";
+import Landing from "./Components/Landing";
 
 import "./Styles/App.css"
 
@@ -11,7 +12,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<FloatHub/>}/>
+          <Route path="/" element={<Landing/>}/>
+          <Route path="/Hub" element={<FloatHub/>}/>
           <Route path="/Events" element={<Events/>}/>
           <Route path="/MessageBoard" element={<MessageBoard/>}/>
         </Routes>

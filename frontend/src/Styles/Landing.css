@@ -1,0 +1,16 @@
+.OptionContainer {
+    display: flex;
+    align-self: center;
+    justify-content: space-evenly;
+    height: 100%
+}
+
+.OptionButton {
+    background: transparent;
+    border: none;
+}
+
+.OptionIcon {
+    width: 300px;
+    height: auto;
+}
