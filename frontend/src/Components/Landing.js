@@ -9,7 +9,8 @@ function Landing() {
     const navigate = useNavigate();
 
     const enter = (isMobile) => {
-        if (!isMobile) navigate("/Hub");
+        if (!isMobile) navigate("/Hub"); 
+        else navigate("/Mobile/Hub");
     }
 
     return (
@@ -17,7 +18,7 @@ function Landing() {
             <button onClick={(() => enter(false))} className="OptionButton">
                 <img src={computer} className="OptionIcon"/>
             </button>
-            <button onClick={(() => enter(false))} className="OptionButton">
+            <button onClick={(() => enter(true))} className="OptionButton">
                 <img src={mobile} className="OptionIcon"/>
             </button>
         </div>

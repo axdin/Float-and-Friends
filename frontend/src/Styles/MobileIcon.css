@@ -1,0 +1,8 @@
+.MobileIconContainer {
+    display: flex;
+}
+
+.MobileIconFriend {
+    width: 90%;
+    height: auto;
+}
