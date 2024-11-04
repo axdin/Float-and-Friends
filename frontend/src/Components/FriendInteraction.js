@@ -1,16 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 import textbox from "../Assets/Objects/CloudTextBox.png";
 
 import "../Styles/FriendInteraction.css";
 
-function FriendInteraction({ name, contents, end }) {
+function FriendInteraction({ contents, end }) {
     const [current, setCurrent] = useState(0);
-
-    useEffect(() => {
-
-    }, [])
 
     const handleClick = () => {
         setCurrent(current + 1);
@@ -19,7 +15,7 @@ function FriendInteraction({ name, contents, end }) {
     return (
         <div>
             <motion.div 
-                animate={{ y: -450 }} 
+                animate={{ y: -500 }} 
                 transition={{ duration: 1, ease: "linear" }}>
                     <div className="InteractionModal">
                         <img src={textbox} className="Textbox"/>
