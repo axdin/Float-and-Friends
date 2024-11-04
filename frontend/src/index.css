@@ -1,5 +1,13 @@
+@font-face {
+  font-family: 'FloatFont';
+  src: local('Floatfont-Regular'), url(./Assets/Floatfont-Regular.ttf) format('truetype');
+}
+
 body, html {
   height: 100%;
+}
+
+body {
   background-color: #b4d2ff;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -7,9 +15,5 @@ body, html {
 
 #root {
   height: 100%;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'FloatFont';
 }
