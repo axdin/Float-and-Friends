@@ -11,9 +11,19 @@ body {
   background-color: #b4d2ff;
   overflow-x: hidden;
   overflow-y: hidden;
+  margin: 0;
 }
 
 #root {
   height: 100%;
   font-family: 'FloatFont';
+}
+
+button, textarea, input {
+  font-family: 'FloatFont';
+}
+
+h1 {
+  font-size: 4em;
+  margin: .5rem 0em;
 }

@@ -9,7 +9,7 @@ function Lamp() {
     const navigate = useNavigate();
 
     const goToPost = () => {
-        navigate("/MessageBoard");
+        navigate("/MessagePost");
     }
 
     return (

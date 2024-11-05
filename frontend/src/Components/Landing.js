@@ -26,10 +26,16 @@ function Landing() {
                 onMouseLeave={() => setIsHoveringComputer(false)}
             className="OptionButton">
                 { isHoveringComputer ? 
-                    <img src={computerGif} className="OptionIcon"/> :
-                    <img src={computer} className="OptionIcon"/>
+                    <div>
+                        <img src={computerGif} className="OptionIcon"/> 
+                        <h1>Computer</h1>
+                    </div>
+                    :
+                    <div>
+                        <img src={computer} className="OptionIcon"/>
+                        <h1>Computer</h1>
+                    </div>
                 }
-                <h1>Computer</h1>
             </button>
             <button onClick={(() => enter(true))}
                 onMouseEnter={() => setIsHoveringMobile(true)}
