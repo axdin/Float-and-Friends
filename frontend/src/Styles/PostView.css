@@ -17,3 +17,99 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.FullPostContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.3);
+    z-index: 11;
+    width: 100%;
+    height: 100%;
+
+}
+.FullPostImg {
+    position: fixed;
+    width: 50%;
+    max-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.FullPostPeople {
+    position: fixed;
+    font-size: 2rem;
+}
+.FullPostMsg {
+    position: fixed;
+    font-size: 2rem;
+    resize: none;
+    background: rgba(0,0,0,.1);
+    border: none;
+}
+.FullPostClose {
+    position: fixed;
+    top: 90%;
+    left: 90%;
+}
+
+
+
+
+#FullHeartTo {
+    top: 20%;
+    left: 30%;
+}
+#FullHeartFrom {
+    top: 80%;
+    left: 46%;
+}
+#FullHeartTxt {
+    top: 30%;
+    left: 34%;
+    height: 35%;
+    width: 30%
+}
+#FullBubbleTo {
+    top: 15%;
+    left: 45%;
+}
+#FullBubbleFrom {
+    top: 80%;
+    left: 45%;
+}
+#FullBubbleTxt {
+    top: 25%;
+    left: 35%;
+    height: 45%;
+    width: 32%
+}
+#FullPrismTo {
+    top: 15%;
+    left: 30%;
+}
+#FullPrismFrom {
+    top: 80%;
+    left: 55%;
+}
+#FullPrismTxt {
+    top: 22%;
+    left: 30%;
+    height: 50%;
+    width: 40%
+}
+#FullStarTo {
+    top: 28%;
+    left: 43%;
+}
+#FullStarFrom {
+    top: 68%;
+    left: 42%;
+}
+#FullStarTxt {
+    top: 36%;
+    left: 39%;
+    height: 30%;
+    width: 23%
+}

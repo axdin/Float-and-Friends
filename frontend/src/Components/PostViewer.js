@@ -52,7 +52,7 @@ function PostViewer() {
             <div className="PostsContainer">
                 { posts.map((post) => {
                     return(
-                        <PostView shape={post.img} addressee={post.to}/>
+                        <PostView shape={post.img} shapeStr={post.shape} to={post.to} from={post.from} msg={post.content}/>
                     )
                 }) }
             </div>
