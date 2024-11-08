@@ -1,9 +1,15 @@
 import "../Styles/PostView.css";
 
-function PostView({ shape }) {
+function PostView({ shape, addressee }) {
     return (
         <div className="PostViewContainer">
-            <img src={shape} className="PostViewImg"/>
+            <button className="PostViewButton">
+                <img src={shape} className="PostViewImg"/>
+                <div className="PostViewAddressee">
+                    {addressee}
+                </div>
+            </button>
+            
         </div>
     )
 }

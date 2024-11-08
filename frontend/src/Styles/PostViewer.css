@@ -11,5 +11,11 @@
 
 .PostsContainer {
     position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    z-index: 10;
+    height: 100%;
+    width: 30%;
+    padding: 0% 2.5%;
 }
-

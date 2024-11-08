@@ -1,8 +1,19 @@
 .PostViewContainer {
-    width: 5%;
-    height: auto;
+    position: relative;
+    width: 20%;
+}
+.PostViewButton {
+    background: transparent;
+    border: none;
 }
 .PostViewImg {
     width: 100%;
     height: auto;
+    display: block;
+}
+.PostViewAddressee {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
