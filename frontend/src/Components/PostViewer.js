@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 
 import { db } from "../firebase";
+import PostView from "./PostView";
 
 import messagePost from "../Assets/Backgrounds/MessagePost.png";
 import heart from "../Assets/Objects/HeartPost.png";
@@ -51,9 +52,7 @@ function PostViewer() {
             <div className="PostsContainer">
                 { posts.map((post) => {
                     return(
-                        <div className="Post">
-                            <img src={post.img} className="PostViewImg"/>
-                        </div>
+                        <PostView shape={post.img}/>
                     )
                 }) }
             </div>
