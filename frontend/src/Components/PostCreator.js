@@ -18,7 +18,9 @@ function PostCreator() {
     const [postContent, setPostContent] = useState("");
 
     const postPost = async (e) => {
-        e.preventDefault();  
+        e.preventDefault(); 
+
+        console.log(shapeString);
 
         try {
             const docRef = await addDoc(collection(db, "posts"), {

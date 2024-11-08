@@ -1,0 +1,23 @@
+.PostViewer {
+    width: 45%;
+    height: 100%;
+}
+
+.MessagePostImg {
+    position: absolute;
+    width: 35%;
+    height: 100%;
+}
+
+.PostsContainer {
+    position: absolute;
+}
+
+.Post {
+    width: 5%;
+    height: auto;
+}
+.PostViewImg {
+    width: 100%;
+    height: auto;
+}

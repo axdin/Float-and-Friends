@@ -1,6 +1,6 @@
 import PostCreator from "./PostCreator";
+import PostViewer from "./PostViewer";
 
-import messagePost from "../Assets/Backgrounds/MessagePost.png";
 import Halo from "../Assets/Friends/Idle-Halo.gif";
 
 import "../Styles/MessagePost.css";
@@ -10,7 +10,7 @@ function MessagePost() {
     return (
         <div className="MessagePost">
             <img src={Halo} className="MessageFriend"/>
-            <img src={messagePost} className="MessagePostImg"/>
+            <PostViewer/>
             <PostCreator/>
         </div>
     );
