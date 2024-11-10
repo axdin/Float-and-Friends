@@ -1,3 +1,4 @@
+import Menu from "./Menu";
 import PostCreator from "./PostCreator";
 import PostViewer from "./PostViewer";
 
@@ -9,6 +10,7 @@ function MessagePost() {
 
     return (
         <div className="MessagePost">
+            <Menu isMobile={false}/>
             <img src={Halo} className="MessageFriend"/>
             <PostViewer/>
             <PostCreator/>

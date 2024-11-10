@@ -23,22 +23,28 @@ function Menu({ isMobile }) {
                 Menu
             </button>
             { isExpanded && 
-                (isMobile ? 
-                    <div className="MobileMenu">
-                        <button className="MenuButton" onClick={() => reroute("/MobileHub")}>
-                            Home
-                        </button>
-                    </div> 
-                    :
-                    <div className="ComputerMenu">
-                        <button className="MenuButton" onClick={() => reroute("/Hub")}>
-                            Home
-                        </button>
-                        <button className="MenuButton" onClick={() => reroute("/MessagePost")}>
-                            Message Post
-                        </button>
-                    </div>
-                )
+                <div>
+                    { isMobile ? 
+                        <div className="MobileMenu">
+                            <button className="MenuButton" onClick={() => reroute("/Mobile/Hub")}>
+                                Home
+                            </button>
+                        </div> 
+                        :
+                        <div className="ComputerMenu">
+                            <button className="MenuButton" onClick={() => reroute("/Hub")}>
+                                Home
+                            </button>
+                            <button className="MenuButton" onClick={() => reroute("/MessagePost")}>
+                                Message Post
+                            </button>
+                        </div>
+                    }
+                    <button className="MenuToggle" onClick={() => reroute(isMobile ? "/Hub" : "/Mobile/Hub")}>
+                        Toggle Mode
+                    </button>
+                </div>
+
             }
             
         </div>
