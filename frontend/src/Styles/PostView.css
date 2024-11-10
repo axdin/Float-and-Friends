@@ -1,6 +1,7 @@
 .PostViewContainer {
     position: relative;
-    width: 20%;
+    width: 23%;
+    padding: 1%;
 }
 .PostViewButton {
     background: transparent;
