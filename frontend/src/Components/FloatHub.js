@@ -1,19 +1,18 @@
-import { useNavigate } from "react-router-dom";
-
 import Lamp from "./Lamp";
 import Friends from "./Friends";
 import CloudGroup from "./CloudGroup";
+import Menu from "./Menu";
 
 import clouds from "../Assets/Backgrounds/clouds.gif";
 
 import "../Styles/FloatHub.css"
 
 function FloatHub () {
-    const navigate = useNavigate();
 
     return (
         <div>
             <div className="Sky">
+                <Menu isMobile={false}/>
                 <img src={clouds} className="Clouds"/>
                 <div className="LampBlock">
                     <Lamp/>
