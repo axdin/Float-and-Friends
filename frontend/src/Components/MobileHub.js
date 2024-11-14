@@ -9,9 +9,9 @@ import "../Styles/MobileHub.css";
 function MobileHub() {
     return (
         <div className="HubContainer">
-            <MobileIcon name="Bear" icon={Star}/>
-            <MobileIcon name="Halo" icon={Halo}/>
-            <MobileIcon name="Star" icon={Bear}/>
+            <MobileIcon name="About Float and Friends" loc="/Mobile/About" icon={Star}/>
+            <MobileIcon name="Post a Message!" loc="/Mobile/MessagePost" icon={Halo}/>
+            <MobileIcon name="Upcoming Community Events" loc="/Mobie/Events" icon={Bear}/>
         </div>
     )
 }

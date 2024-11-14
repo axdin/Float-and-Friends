@@ -1,8 +1,20 @@
 .MobileIconContainer {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.MobileIconButton {
+    width: 90%;
+    height: auto;
 }
 
 .MobileIconFriend {
     width: 90%;
     height: auto;
+}
+
+.MobileIconTitle {
+    font-size: 2rem;
 }
