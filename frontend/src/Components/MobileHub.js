@@ -11,7 +11,7 @@ function MobileHub() {
         <div className="HubContainer">
             <MobileIcon name="About Float and Friends" loc="/Mobile/About" icon={Star}/>
             <MobileIcon name="Post a Message!" loc="/Mobile/MessagePost" icon={Halo}/>
-            <MobileIcon name="Upcoming Community Events" loc="/Mobie/Events" icon={Bear}/>
+            <MobileIcon name="Upcoming Community Events" loc="/Mobile/Events" icon={Bear}/>
         </div>
     )
 }

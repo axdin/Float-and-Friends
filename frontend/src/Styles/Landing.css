@@ -8,9 +8,14 @@
 .OptionButton {
     background: transparent;
     border: none;
+    width: 40%;
 }
 
 .OptionIcon {
-    width: 300px;
+    width: 90%;
     height: auto;
+}
+
+.OptionLabel {
+    font-size: 1.5rem;
 }
