@@ -12,7 +12,7 @@ const colors = ["blue", "red", "green", "violet"];
 function MobileEvents() {
     const [eventIndex, setEventIndex] = useState(0);
 
-    const advanceEvent = () => {
+    const increment = () => {
         setEventIndex(eventIndex + 1);
     }
 
@@ -21,7 +21,7 @@ function MobileEvents() {
             { eventIndex < colors.length ? 
                 <div className="MobileEventContainer">
                     <EventCard front={testFront} back={testBack}/>
-                    <button className="NextEventButton" onClick={advanceEvent}>
+                    <button className="NextEventButton" onClick={increment}>
                         Next
                     </button>
 
