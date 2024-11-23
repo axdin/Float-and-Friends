@@ -10,6 +10,8 @@
 .MobileIconButton {
     width: auto;
     height: 70%;
+    background-color: transparent;
+    border: none;
 }
 
 .MobileIconFriend {
