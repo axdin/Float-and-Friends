@@ -4,6 +4,7 @@ import Menu from "./Menu"
 import Star from "../Assets/Friends/Idle-Star.gif";
 import Halo from "../Assets/Friends/Idle-Halo.gif";
 import Bear from "../Assets/Friends/Idle-Bear.gif";
+import Chiffon from "../Assets/Friends/Chiffon_IdleAnimation.gif";
 
 import "../Styles/MobileHub.css";
 
@@ -11,12 +12,13 @@ function MobileHub() {
     return (
         <div className="HubContainer">
             <div className="MobileHubHeader">
-                
+
                 <Menu isMobile={true}/>
             </div>
             <MobileIcon name="About Float and Friends" loc="/Mobile/About" icon={Star}/>
             <MobileIcon name="Post a Message!" loc="/Mobile/MessagePost" icon={Halo}/>
             <MobileIcon name="Upcoming Community Events" loc="/Mobile/Events" icon={Bear}/>
+            <MobileIcon name="Contact us!! Pls!!!" loc="/Mobile/Contact" icon={Chiffon}/>
         </div>
     )
 }

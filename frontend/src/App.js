@@ -9,6 +9,7 @@ import MobileHub from "./Components/MobileHub";
 import MobileAbout from "./Components/MobileAbout";
 import MobileEvents from "./Components/MobileEvents";
 import MobileMessagePost from "./Components/MobileMessagePost";
+import MobileContact from "./Components/MobileContact";
 
 import "./Styles/App.css"
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/Mobile/About" element={<MobileAbout/>}/>
           <Route path="/Mobile/Events" element={<MobileEvents/>}/>
           <Route path="/Mobile/MessagePost" element={<MobileMessagePost/>}/>
+          <Route path="/Mobile/Contact" element={<MobileContact/>}/>
         </Routes>
       </BrowserRouter>
     </div>

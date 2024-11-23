@@ -1,0 +1,40 @@
+.MobileContactContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin-top: 5%;
+}
+
+.MobileContactTextRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 60%
+}
+
+.MobileContactText {
+    height: 55%;
+    background-image: url("../Assets/Backgrounds/CloudMobileAbout.png");
+    background-size: cover;
+    
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 23%;
+}
+
+.MobileContactMessageContainer {
+    height: 55%;
+    background-image: url("../Assets/Backgrounds/CloudMobileAbout.png");
+    background-size: cover;
+}
+
+.MobileContactFriendRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.MobileContactFriendImg {
+    width: 60%;
+}
