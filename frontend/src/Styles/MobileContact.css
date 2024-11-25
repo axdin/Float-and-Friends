@@ -19,7 +19,7 @@
     background-size: cover;
     
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     padding: 23%;
 }
 
@@ -37,4 +37,23 @@
 
 .MobileContactFriendImg {
     width: 60%;
+}
+
+.MobileContactNameLabel{
+    display: block;
+    width: 120%;
+}
+
+.MobileContactEmailLabel{
+ display: block;
+ width: 120%;
+}
+
+.MobileContactMessageLabel {
+    display: block;
+    width: 120%;
+}
+
+.MobileContactMessageInput {
+    height: 54px;
 }
