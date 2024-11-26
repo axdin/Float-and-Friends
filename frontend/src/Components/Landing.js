@@ -15,8 +15,14 @@ function Landing() {
     const navigate = useNavigate();
 
     const enter = (isMobile) => {
-        if (!isMobile) navigate("/Hub"); 
-        else navigate("/Mobile/Hub");
+        if (!isMobile) {
+            setIsHoveringComputer(true);
+            setTimeout(() => navigate("/Hub"), 1000);
+        } 
+        else {
+            setIsHoveringMobile(true);
+            setTimeout(() => navigate("/Mobile/Hub"), 1000);
+        }
     }
 
     return (
