@@ -2,6 +2,7 @@ import { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 
 import { db } from "../firebase";
+import Menu from "./Menu";
 
 import chiffon from "../Assets/Friends/Chiffon_Still.png";
 import instagram from "../Assets/Icons/IG_Icon.png";
@@ -48,6 +49,9 @@ function MobileContact() {
 
     return (
         <div className="MobileContactContainer">
+            <div className="MobileAboutHeaderRow">
+                <Menu isMobile={true}/>
+            </div>
             <div className="MobileContactTextRow">
                 { !isInputing ? 
                     <div className="MobileContactText">

@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import Menu from "./Menu";
 import EventCard from "./EventCard";
 
 import testFront from "../Assets/EventCards/EventCardFront-Test.png";
@@ -18,6 +19,9 @@ function MobileEvents() {
 
     return (
         <div className="MobileEventsPage">
+            <div className="MobileAboutHeaderRow">
+                <Menu isMobile={true}/>
+            </div>
             { eventIndex < colors.length ? 
                 <div className="MobileEventContainer">
                     <EventCard front={testFront} back={testBack}/>
@@ -30,7 +34,6 @@ function MobileEvents() {
                 <div>
                 </div>
             }
-            
         </div>
     );
 }

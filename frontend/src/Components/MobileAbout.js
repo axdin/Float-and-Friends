@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import Menu from "./Menu"
+
 import star from "../Assets/Friends/Star-Still.png";
 import intro from "../Assets/Backgrounds/MobileAboutIntro.gif";
 
@@ -31,6 +33,9 @@ function MobileAbout() {
 
     return (
         <div className="MobileAboutContainer">
+            <div className="MobileAboutHeaderRow">
+                <Menu isMobile={true}/>
+            </div>
             <div className="MobileAboutTextRow">
                 { aboutIndex < texts.length && (
                     aboutIndex === 0 ? 
