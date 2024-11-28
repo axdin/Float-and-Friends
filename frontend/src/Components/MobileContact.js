@@ -4,7 +4,8 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase";
 
 import chiffon from "../Assets/Friends/Chiffon_Still.png";
-
+import instagram from "../Assets/Icons/IG_Icon.png";
+import tiktok from "../Assets/Icons/TikTok_Icon.png";
 
 import "../Styles/MobileContact.css";
 
@@ -26,14 +27,23 @@ function MobileContact() {
 
         try {
             const docRef = await addDoc(collection(db, "emails"), {
-                from: name,
-                email: email,
-                content: message
+                to: [{
+                      email: 'andykdamm@gmail.com',
+                      name: 'Andy'
+                    }],
+                reply_to: {
+                    email: email,
+                      name: name
+                  },
+                subject: "New message from the F&F Website",
+                text: message
             });
             console.log("Document written with ID: ", docRef.id);
           } catch (e) {
             console.error("Error adding document: ", e);
-          }
+        }
+
+        switchMode();
     }
 
     return (
@@ -65,17 +75,26 @@ function MobileContact() {
             </div>
             <div className="MobileContactFriendRow">
                 <img className="MobileContactFriendImg" src={chiffon}/>
-                { !isInputing ?
-                    <button className="SwitchContactButton" onClick={switchMode}>
-                        Begin message
-                    </button> :
-                    <button className="SubmitMessageButton" onClick={submitMessage}>
-                        Submit for shipment!
-                    </button>
-                }
-                <div className="MobileSocialMediaContainer">
-
-
+                <div className="MobileContactActionsContainer">
+                    { !isInputing ?
+                        <button className="SwitchContactButton" onClick={switchMode}>
+                            Begin message
+                        </button> :
+                        <button className="SubmitMessageButton" onClick={submitMessage}>
+                            Submit for shipment!
+                        </button>
+                    }
+                    <div className="MobileSocialMediaContainer">
+                        <div>Check us out on social media here!</div>
+                        <div className="MobileSocialMediaIconsContainer">
+                            <a href="https://www.instagram.com/floatandfriends" target="_blank">
+                                <img className="MobileSocialMediaIcon" src={instagram}/>
+                            </a>
+                            <a href="https://www.tiktok.com/@floatandfriends" target="_blank">
+                               <img className="MobileSocialMediaIcon" src={tiktok}/>
+                            </a>
+                        </div>        
+                    </div>
                 </div>
             </div>
         </div>
