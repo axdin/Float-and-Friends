@@ -17,6 +17,7 @@ function MobileContact() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [isIncomplete, setIsIncomplete] = useState(false);
 
 
     const switchMode = () => {
@@ -26,25 +27,30 @@ function MobileContact() {
     const submitMessage = async(e) => {
         e.preventDefault(); 
 
-        try {
-            const docRef = await addDoc(collection(db, "emails"), {
-                to: [{
-                      email: 'andykdamm@gmail.com',
-                      name: 'Andy'
-                    }],
-                reply_to: {
-                    email: email,
-                      name: name
-                  },
-                subject: "New message from the F&F Website",
-                text: message
-            });
-            console.log("Document written with ID: ", docRef.id);
-          } catch (e) {
-            console.error("Error adding document: ", e);
+        if (name === "" || email === "" || message === "") {
+            setIsIncomplete(true);
         }
-
-        switchMode();
+        else {
+            setIsIncomplete(false);
+            try {
+                const docRef = await addDoc(collection(db, "emails"), {
+                    to: [{
+                        email: 'andykdamm@gmail.com',
+                        name: 'Andy'
+                        }],
+                    reply_to: {
+                        email: email,
+                        name: name
+                    },
+                    subject: "New message from the F&F Website",
+                    text: message
+                });
+                console.log("Document written with ID: ", docRef.id);
+            } catch (e) {
+                console.error("Error adding document: ", e);
+            }
+            switchMode();
+        } 
     }
 
     return (
@@ -74,6 +80,11 @@ function MobileContact() {
                                 maxlength="150" 
                                 onChange={(e)=>setMessage(e.target.value)}/>
                         </label>
+                        { isIncomplete && 
+                            <div className="MobileContactIncompleteText">
+                                Please make sure to complete all of the fields before submitting!
+                            </div>
+                        }
                     </div>
                 }
             </div>

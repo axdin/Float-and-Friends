@@ -32,6 +32,11 @@
     background-size: cover;
 }
 
+.MobileContactIncompleteText {
+    font-size: .6rem;
+    color: red;
+}
+
 .MobileContactFriendRow {
     display: flex;
     flex-direction: row;
@@ -49,8 +54,8 @@
 }
 
 .MobileContactEmailLabel{
- display: block;
- width: 120%;
+    display: block;
+    width: 120%;
 }
 
 .MobileContactMessageLabel {
