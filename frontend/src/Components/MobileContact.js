@@ -49,7 +49,7 @@ function MobileContact() {
 
     return (
         <div className="MobileContactContainer">
-            <div className="MobileAboutHeaderRow">
+            <div className="MobileContactHeaderRow">
                 <Menu isMobile={true}/>
             </div>
             <div className="MobileContactTextRow">

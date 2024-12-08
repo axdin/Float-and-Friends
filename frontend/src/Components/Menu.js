@@ -19,13 +19,19 @@ function Menu({ isMobile }) {
 
     return (
         <div className="MenuContainer">
-            <button className="MenuContainerButton" onClick={toggleMenuExpansion}>
-                Menu
-            </button>
-            { isExpanded && 
-                <div>
+            
+            { !isExpanded ? 
+                <div className="ClosedMenu">
+                    <button className="MenuContainerButton" onClick={toggleMenuExpansion}>
+                        Menu
+                    </button>
+                </div> :
+                <div className="OpenMenu">
                     { isMobile ? 
                         <div className="MobileMenu">
+                            <button className="MenuContainerButton" onClick={toggleMenuExpansion}>
+                                Menu
+                            </button>
                             <button className="MenuButton" onClick={() => reroute("/Mobile/Hub")}>
                                 Home
                             </button>
@@ -49,11 +55,7 @@ function Menu({ isMobile }) {
                             </button>
                         </div>
                     }
-                    <button className="MenuToggle" onClick={() => reroute(isMobile ? "/Hub" : "/Mobile/Hub")}>
-                        Toggle Mode
-                    </button>
                 </div>
-
             }
             
         </div>

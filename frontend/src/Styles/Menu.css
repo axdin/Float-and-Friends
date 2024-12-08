@@ -1,16 +1,45 @@
 .MenuContainer {
-    position: absolute;
+    height: 300%;
+    width: 25%;
+    position: relative;
     z-index: 3;
-    top: 0%;
-    left: 0%;
-    height: 5%;
-    width: 5%;
 }
+
+.ClosedMenu{
+    background-image: url("../Assets/Icons/MenuClosed.png");
+    background-size: cover;
+    height: 40%;
+    width: 110%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.OpenMenu{
+
+}
+
 .MenuContainerButton {
-    height: 100%;
     width: 100%;
+    background: transparent;
+    border: none;
 }
 
+.OpenMenu {
+    background-image: url("../Assets/Icons/MenuOpen.png");
+    background-size: cover;
+    height: 100%;
+    width: 110%;
+}
 .MobileMenu {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+.MenuButton {
+    background: transparent;
+    border: none;
+    margin: 2%
 }

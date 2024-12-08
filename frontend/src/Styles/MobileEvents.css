@@ -7,7 +7,31 @@
     align-items: center;
 }
 
+.MobileEventsHeaderRow {
+    height: 10%;
+    width: 100%;
+}
+
 .MobileEventContainer{
     height: 90%;
     width: 90%;
+}
+
+.MobileEventsButtonRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 15%;
+    width: 100%
+}
+
+.ShuffleEventButton {
+    height: 100%;
+    width: 40%;
+    background: transparent;
+    border: none;
+}
+
+.ShuffleEventButtonImg {
+    height: 90%;
 }

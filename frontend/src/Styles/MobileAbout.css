@@ -3,7 +3,10 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    margin-top: 5%;
+}
+
+.MobileAboutHeaderRow {
+    height: 10%;
 }
 
 .MobileAboutTextRow {
@@ -32,8 +35,20 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    height: 30%;
 }
 
 .MobileAboutFriendImg {
-    width: 60%;
+    height: 110%;
+}
+
+.NextAboutButton {
+    height: 50%;
+    background: transparent;
+    border: none;
+}
+
+.NextAboutButtonImg {
+    height: 100%;
+
 }

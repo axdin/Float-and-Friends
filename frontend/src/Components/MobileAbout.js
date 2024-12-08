@@ -5,6 +5,7 @@ import Menu from "./Menu"
 
 import star from "../Assets/Friends/Star-Still.png";
 import intro from "../Assets/Backgrounds/MobileAboutIntro.gif";
+import nextButton from "../Assets/Icons/NextButton.png";
 
 import "../Styles/MobileAbout.css";
 
@@ -49,7 +50,7 @@ function MobileAbout() {
                 <img className="MobileAboutFriendImg" src={star}/>
                 { aboutIndex < texts.length - 1 ? 
                     <button className="NextAboutButton" onClick={increment}>
-                        Next
+                         <img className="NextAboutButtonImg" src={nextButton}/>
                     </button> :
                     <div>
                         <button className="RestartAboutButton" onClick={restart}>

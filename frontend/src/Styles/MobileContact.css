@@ -3,7 +3,10 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    margin-top: 5%;
+}
+
+.MobileContactHeaderRow {
+    height: 10%;
 }
 
 .MobileContactTextRow {
@@ -33,11 +36,11 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    height: 40%;
+    height: 30%;
 }
 
 .MobileContactFriendImg {
-    width: 60%;
+    height: 110%;
 }
 
 .MobileContactNameLabel{
