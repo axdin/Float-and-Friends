@@ -66,11 +66,11 @@ function MobileContact() {
                     <div className="MobileContactText">
                         <label className="MobileContactNameLabel">
                             What do we call you?
-                            <input className="MobileContactNameInput" onChange={(e)=>setName(e.target.value)}/>
+                            <input className="MobileContactNameInput" onChange={(e)=>setName(e.target.value)} placeholder="Your name"/>
                         </label>
                         <label className="MobileContactEmailLabel">
                             How can we reach you?
-                            <input className="MobileContactEmailInput" onChange={(e)=>setEmail(e.target.value)}/>
+                            <input className="MobileContactEmailInput" onChange={(e)=>setEmail(e.target.value)} placeholder="Your email"/>
                         </label>
                         <label className="MobileContactMessageLabel">
                             What do you have to say?
@@ -78,7 +78,8 @@ function MobileContact() {
                                 type="text" 
                                 className="MobileContactMessageInput" 
                                 maxlength="150" 
-                                onChange={(e)=>setMessage(e.target.value)}/>
+                                onChange={(e)=>setMessage(e.target.value)}
+                                placeholder="Your message to us"/>
                         </label>
                         { isIncomplete && 
                             <div className="MobileContactIncompleteText">

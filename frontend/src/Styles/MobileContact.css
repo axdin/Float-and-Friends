@@ -35,6 +35,8 @@
 .MobileContactIncompleteText {
     font-size: .6rem;
     color: red;
+    display: block;
+    width: 120%;
 }
 
 .MobileContactFriendRow {
