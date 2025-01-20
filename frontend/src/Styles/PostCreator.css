@@ -1,25 +1,25 @@
 .PostContainer {
     height: 100%;
-    width: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .PostInputContainer {
-    position: absolute;
-    top: 1%;
-    width: 40%;
-    height: 50%;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .PostImg {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 150%;
-
+    height: 100%;
+    width: 100%
 }
 
 .PostPersonContainer {
-    position: absolute;
+    position: fixed;
     font-size: 2em;
     width: 100%;
 
@@ -33,12 +33,12 @@
     width: 20%;
 }
 #HeartTo {
-    top: 25%;
-    left: 15%;
+    top: 19%;
+    left: 8%;
 }
 #HeartFrom {
-    top: 108%;
-    left: 28%;
+    top: 50%;
+    left: 26%;
 }
 #BubbleTo {
     top: 25%;
@@ -73,10 +73,10 @@
     resize: none;
 }
 #HeartTxt {
-    top: 40%;
+    top: 27%;
     left: 19%;
     width: 60%;
-    height: 60%;
+    height: 25%;
 }
 #BubbleTxt {
     top: 42%;

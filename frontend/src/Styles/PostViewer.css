@@ -1,12 +1,13 @@
 .PostViewer {
-    width: 45%;
     height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .MessagePostImg {
     position: absolute;
-    width: 35%;
     height: 100%;
+    transform: translateY(-9.1%);
 }
 
 .PostsContainer {

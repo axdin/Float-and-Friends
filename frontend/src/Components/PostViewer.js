@@ -12,7 +12,7 @@ import star from "../Assets/Objects/StarPost.png";
 
 import "../Styles/PostViewer.css";
 
-function PostViewer() {
+function PostViewer({ width }) {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
@@ -48,8 +48,8 @@ function PostViewer() {
 
     return (
         <div className="PostViewer">
-            <img src={messagePost} className="MessagePostImg"/>
-            <div className="PostsContainer">
+            <img src={messagePost} className="MessagePostImg" style={{width: width}}/>
+            <div className="PostsContainer" style={{width: width}}>
                 { posts.map((post) => {
                     return(
                         <PostView shape={post.img} shapeStr={post.shape} to={post.to} from={post.from} msg={post.content}/>

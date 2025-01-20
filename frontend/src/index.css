@@ -21,6 +21,7 @@ body {
 
 button, textarea, input {
   font-family: 'FloatFont';
+  cursor: pointer;
 }
 
 h1 {
