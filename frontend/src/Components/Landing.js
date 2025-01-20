@@ -21,7 +21,7 @@ function Landing() {
         } 
         else {
             setIsHoveringMobile(true);
-            setTimeout(() => navigate("/Mobile/Hub"), 1000);
+            setTimeout(() => navigate("/ComingSoon"), 1000);
         }
     }
 

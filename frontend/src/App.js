@@ -12,6 +12,8 @@ import MobileMessagePost from "./Components/MobileMessagePost";
 import MobileContact from "./Components/MobileContact";
 import MobileExhibit from "./Components/MobileExhibit";
 
+import ComingSoon from "./Components/ComingSoon";
+
 import "./Styles/App.css"
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
           <Route path="/Mobile/MessagePost" element={<MobileMessagePost/>}/>
           <Route path="/Mobile/Contact" element={<MobileContact/>}/>
           <Route path="/Mobile/Exhibit" element={<MobileExhibit/>}/>
+
+          <Route path="/ComingSoon" element={<ComingSoon/>}/>
         </Routes>
       </BrowserRouter>
     </div>
