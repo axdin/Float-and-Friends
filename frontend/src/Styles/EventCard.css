@@ -1,6 +1,8 @@
 .EventCardContainer {
     width: 100%;
     height: 85%;
+    transform: translateY(7%);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,4 +12,15 @@
 .EventCardImg {
     width: 90%;
     height: auto;
+}
+
+.FlipCardButton{
+    height: 20%;
+    width: 30%;
+    background: transparent;
+    border: none;
+}
+
+.FlipCardImg {
+    height: 90%;
 }

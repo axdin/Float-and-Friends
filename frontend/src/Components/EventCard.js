@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import flipButton from "../Assets/Icons/FlipButton.png";
+
 import "../Styles/EventCard.css";
 
 function EventCard({ front, back }) {
@@ -14,7 +16,9 @@ function EventCard({ front, back }) {
             { isFront ? 
                 <img className="EventCardImg" src={front}/> : <img className="EventCardImg" src={back}/>
             }
-            <button className="FlipCardButton" onClick={flip}>Flip</button>
+            <button className="FlipCardButton" onClick={flip}>
+                <img className="FlipCardImg" src={flipButton}/>
+            </button>
         </div>
     );
 }
