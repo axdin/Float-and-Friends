@@ -19,9 +19,9 @@
 
 .MobileEventsButtonRow{
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
-    height: 15%;
+    height: 14%;
     width: 100%
 }
 
@@ -34,4 +34,11 @@
 
 .ShuffleEventButtonImg {
     height: 90%;
+}
+
+.ShuffleButtonPlaceholder {
+    height: 100%;
+    width: 40%;
+    background: transparent;
+    border: none;
 }

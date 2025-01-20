@@ -6,6 +6,7 @@ import Menu from "./Menu"
 import star from "../Assets/Friends/Star-Still.png";
 import intro from "../Assets/Backgrounds/MobileAboutIntro.gif";
 import nextButton from "../Assets/Icons/NextButton.png";
+import restartButton from "../Assets/Icons/RestartButton.png";
 
 import "../Styles/MobileAbout.css";
 
@@ -28,10 +29,6 @@ function MobileAbout() {
         setAboutIndex(0);
     }
 
-    const goHome = () => {
-        navigate("/Mobile/Hub")
-    }
-
     return (
         <div className="MobileAboutContainer">
             <div className="MobileAboutHeaderRow">
@@ -50,16 +47,11 @@ function MobileAbout() {
                 <img className="MobileAboutFriendImg" src={star}/>
                 { aboutIndex < texts.length - 1 ? 
                     <button className="NextAboutButton" onClick={increment}>
-                         <img className="NextAboutButtonImg" src={nextButton}/>
+                        <img className="NextAboutButtonImg" src={nextButton}/>
                     </button> :
-                    <div>
-                        <button className="RestartAboutButton" onClick={restart}>
-                            Start Over
-                        </button>
-                        <button className="GoHomeAboutButton" onClick={goHome}>
-                            Return to Hub
-                        </button>
-                    </div>
+                    <button className="RestartAboutButton" onClick={restart}>
+                        <img className="RestartAboutButtonImg" src={restartButton}/>
+                    </button>
                 }
             </div>
         </div>

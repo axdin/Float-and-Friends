@@ -45,16 +45,19 @@ function MobileEvents() {
             <div className="MobileEventsHeaderRow">
                 <Menu isMobile={true}/>
             </div>
-            { events.length > 0 && 
+            { (events.length > 0 && eventIndex < events.length) &&
                 <div className="MobileEventContainer">
                     <EventCard front={events[eventIndex].front} back={events[eventIndex].back}/>
                     <div className="MobileEventsButtonRow">
+                        { eventIndex === events.length - 1 && 
+                            <div className="ShuffleButtonPlaceholder"></div>
+                        }
                         { eventIndex > 0 && 
                             <button className="ShuffleEventButton" onClick={decrement}>
                                 <img className="ShuffleEventButtonImg" src={prevButton}/>
                             </button>
                         }
-                        { eventIndex < events.length && 
+                        { eventIndex < events.length - 1 && 
                             <button className="ShuffleEventButton" onClick={increment}>
                                 <img className="ShuffleEventButtonImg" src={nextButton}/>
                             </button>

@@ -35,6 +35,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
     height: 30%;
 }
 
@@ -49,6 +50,17 @@
 }
 
 .NextAboutButtonImg {
+    height: 100%;
+
+}
+
+.RestartAboutButton {
+    height: 80%;
+    background: transparent;
+    border: none;
+}
+
+.RestartAboutButtonImg {
     height: 100%;
 
 }
