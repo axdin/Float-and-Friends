@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, forwardRef, useImperativeHandle } from "react";
 import { collection, addDoc } from "firebase/firestore";
 
 import { db } from "../firebase";
@@ -10,30 +10,28 @@ import star from "../Assets/Objects/StarPost.png";
 
 import "../Styles/PostCreator.css";
 
-function PostCreator() {
+const PostCreator = forwardRef((props, ref) => {
     const [postShape, setPostShape] = useState(heart);
     const [shapeString, setShapeString] = useState("Heart");
     const [to, setTo] = useState("");
     const [from, setFrom] = useState("");
     const [postContent, setPostContent] = useState("");
 
-    const postPost = async (e) => {
-        e.preventDefault(); 
-
-        console.log(shapeString);
-
-        try {
-            const docRef = await addDoc(collection(db, "posts"), {
-                shape: shapeString,
-                to: to,
-                from: from,
-                content: postContent
-            });
-            console.log("Document written with ID: ", docRef.id);
-          } catch (e) {
-            console.error("Error adding document: ", e);
-          }
-    }
+    useImperativeHandle(ref, () => ({
+        postPost: async () => {
+            try {
+                const docRef = await addDoc(collection(db, "posts"), {
+                    shape: shapeString,
+                    to: to,
+                    from: from,
+                    content: postContent,
+                });
+                console.log("Document written with ID: ", docRef.id);
+            } catch (e) {
+                console.error("Error adding document: ", e);
+            }
+        },
+    }));
 
     const toggleShape = (shape, str) => {
         setPostShape(shape);
@@ -73,9 +71,8 @@ function PostCreator() {
                     <img src={star} className="PostButtonImg"/>
                 </button>
             </div>
-            <button onClick={postPost} className="PostPostButton">Post</button>
         </div>
     );
-}
+});
 
 export default PostCreator;

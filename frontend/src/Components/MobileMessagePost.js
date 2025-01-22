@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import Menu from "./Menu";
 import PostCreator from "./PostCreator";
@@ -8,21 +8,27 @@ import "../Styles/MobileMessagePost.css";
 
 function MobileMessagePost() {
     const [createMode, setCreateMode] = useState(false);
+    const postCreatorRef = useRef(null);
+
+    const createPost  = () => {
+        createMode && postCreatorRef.current.postPost();
+        setCreateMode(!createMode);
+    };
 
     return (
         <div className="MobileMessagePostPage">
             <div className="MobileMessagePostHeaderRow">
                 <Menu isMobile={true}/>
-                <button onClick={() => setCreateMode(!createMode)}>
-                    Create Post
+                <button onClick={createPost}>
+                    { createMode ? "post" : "create"}
                 </button>
             </div>
             { !createMode ? 
                 <div className="MobileMessagePostContainer">
-                    <PostViewer width={200}/>
+                    <PostViewer width={70}/>
                 </div> :
                 <div className="MobileMessagePostContainer">
-                    <PostCreator/>
+                    <PostCreator ref={postCreatorRef}/>
                 </div>
             
             }

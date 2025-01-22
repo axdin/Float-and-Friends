@@ -48,8 +48,8 @@ function PostViewer({ width }) {
 
     return (
         <div className="PostViewer">
-            <img src={messagePost} className="MessagePostImg" style={{width: width}}/>
-            <div className="PostsContainer" style={{width: width}}>
+            <img src={messagePost} className="MessagePostImg" style={{width: `${width}%`}}/>
+            <div className="PostsContainer" style={{width: `${width-6}%`}}>
                 { posts.map((post) => {
                     return(
                         <PostView shape={post.img} shapeStr={post.shape} to={post.to} from={post.from} msg={post.content}/>

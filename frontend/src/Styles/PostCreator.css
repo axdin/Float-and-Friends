@@ -37,32 +37,32 @@
     left: 8%;
 }
 #HeartFrom {
-    top: 50%;
+    top: 54%;
     left: 26%;
 }
 #BubbleTo {
-    top: 25%;
-    left: 35%;
+    top: 17%;
+    left: 30%;
 }
 #BubbleFrom {
-    top: 108%;
+    top: 59%;
     left: 28%;
 }
 #PrismTo {
-    top: 20%;
+    top: 17%;
     left: 10%;
 }
 #PrismFrom {
-    top: 120%;
-    left: 55%;
+    top: 58%;
+    left: 40%;
 }
 #StarTo {
-    top: 40%;
-    left: 35%;
+    top: 30%;
+    left: 31%;
 }
 #StarFrom {
-    top: 100%;
-    left: 32%;
+    top: 50%;
+    left: 30%;
 }
 
 .PostTxt {
@@ -79,27 +79,27 @@
     height: 25%;
 }
 #BubbleTxt {
-    top: 42%;
+    top: 25%;
     left: 16%;
     width: 70%;
-    height: 60%;
+    height: 30%;
 }
 #PrismTxt {
-    top: 35%;
+    top: 25%;
     left: 10%;
-    width: 80%;
-    height: 80%;
+    width: 79%;
+    height: 30%;
 }
 #StarTxt {
-    top: 52%;
+    top: 37%;
     left: 28%;
     width: 45%;
-    height: 45%;
+    height: 10%;
 }
 
 .PostButtonContainer {
-    position: absolute;
-    top: 75%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .PostButton {
