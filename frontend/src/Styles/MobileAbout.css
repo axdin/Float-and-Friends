@@ -18,14 +18,14 @@
 
 .MobileAboutTextImg {
     height: 100%;
-    width: auto;
+    width: 100%;
 }
 
 .MobileAboutText {
     height: 55%;
-    background-image: url("../Assets/Backgrounds/CloudMobileAbout.png");
-    background-size: cover;
-    
+    background-image: url("../Assets/Backgrounds/MobileAboutBackground.png");
+    background-size: contain;
+    background-repeat: no-repeat;
     text-align: center;
     font-size: 1.25rem;
     padding: 23%;
@@ -50,12 +50,12 @@
 }
 
 .NextAboutButtonImg {
-    height: 100%;
+    height: 90%;
 
 }
 
 .RestartAboutButton {
-    height: 80%;
+    height: 60%;
     background: transparent;
     border: none;
 }

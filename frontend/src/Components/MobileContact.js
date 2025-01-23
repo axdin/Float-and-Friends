@@ -35,8 +35,8 @@ function MobileContact() {
             try {
                 const docRef = await addDoc(collection(db, "emails"), {
                     to: [{
-                        email: 'andykdamm@gmail.com',
-                        name: 'Andy'
+                        email: 'floatandfriends@gmail.com',
+                        name: 'Float and Friends'
                         }],
                     reply_to: {
                         email: email,

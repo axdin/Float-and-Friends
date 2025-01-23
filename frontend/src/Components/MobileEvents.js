@@ -3,14 +3,10 @@ import { useState, useEffect } from "react";
 import Menu from "./Menu";
 import EventCard from "./EventCard";
 
-import testFront from "../Assets/EventCards/EventCardFront-Test.png";
-import testBack from "../Assets/EventCards/EventCardBack-Test.png";
 import wfFront from "../Assets/EventCards/PostCardFront-WF.png";
 import wfBack from "../Assets/EventCards/PostCardBack-WF.png";
-
-import nextButton from "../Assets/Icons/NextButton.png";
-import prevButton from "../Assets/Icons/PrevButton.png";
-
+import ccFront from "../Assets/EventCards/PostCardFront-CC.png";
+import ccBack from "../Assets/EventCards/PostCardBack-CC.png";
 
 import "../Styles/MobileEvents.css";
 
@@ -23,12 +19,18 @@ function MobileEvents() {
             {
                 title: "Writer's Float",
                 front: wfFront,
-                back: wfBack
+                back: wfBack,
+                desc: "Free virtual 8-week program to help you build a writing project from scratch.",
+                dates: "01.16.2025 to 03.06.2025",
+                link: ""
             },
             {
                 title: "Cloud Cafe",
-                front: testFront,
-                back: testBack
+                front: ccFront,
+                back: ccBack,
+                desc: "Write, create, and design in a virtual community workspace.",
+                dates: "01.06.2025, 01.20.2025",
+                link: "",
             }
         ])
     }, [])
@@ -39,6 +41,12 @@ function MobileEvents() {
     const decrement = () => {
         setEventIndex(eventIndex - 1);
     }
+    const checkLeft = () => {
+        return(eventIndex > 0 ? true : false);
+    }
+    const checkRight = () => {
+        return(eventIndex < (events.length - 1) ? true : false);
+    }
 
     return (
         <div className="MobileEventsPage">
@@ -47,22 +55,11 @@ function MobileEvents() {
             </div>
             { (events.length > 0 && eventIndex < events.length) &&
                 <div className="MobileEventContainer">
-                    <EventCard front={events[eventIndex].front} back={events[eventIndex].back}/>
-                    <div className="MobileEventsButtonRow">
-                        { eventIndex === events.length - 1 && 
-                            <div className="ShuffleButtonPlaceholder"></div>
-                        }
-                        { eventIndex > 0 && 
-                            <button className="ShuffleEventButton" onClick={decrement}>
-                                <img className="ShuffleEventButtonImg" src={prevButton}/>
-                            </button>
-                        }
-                        { eventIndex < events.length - 1 && 
-                            <button className="ShuffleEventButton" onClick={increment}>
-                                <img className="ShuffleEventButtonImg" src={nextButton}/>
-                            </button>
-                        }
-                    </div>
+                    <EventCard event={events[eventIndex]} 
+                        hasLeft={checkLeft()} 
+                        hasRight={checkRight()}
+                        goLeft={() => decrement()}
+                        goRight={() => increment()}/>
                 </div>
             }
         </div>

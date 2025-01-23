@@ -18,9 +18,9 @@
 
 .MobileContactText {
     height: 55%;
-    background-image: url("../Assets/Backgrounds/CloudMobileAbout.png");
-    background-size: cover;
-    
+    background-image: url("../Assets/Backgrounds/MobileAboutBackground.png");
+    background-size: contain;
+    background-repeat: no-repeat;
     text-align: center;
     font-size: 1.15rem;
     padding: 23%;
@@ -28,15 +28,16 @@
 
 .MobileContactMessageContainer {
     height: 55%;
-    background-image: url("../Assets/Backgrounds/CloudMobileAbout.png");
-    background-size: cover;
+    background-image: url("../Assets/Backgrounds/MobileAboutBackground.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .MobileContactIncompleteText {
     font-size: .6rem;
     color: red;
     display: block;
-    width: 120%;
+    width: 100%;
 }
 
 .MobileContactFriendRow {
@@ -52,17 +53,17 @@
 
 .MobileContactNameLabel{
     display: block;
-    width: 120%;
+    width: 100%;
 }
 
 .MobileContactEmailLabel{
     display: block;
-    width: 120%;
+    width: 100%;
 }
 
 .MobileContactMessageLabel {
     display: block;
-    width: 120%;
+    width: 100%;
 }
 
 .MobileContactMessageInput {

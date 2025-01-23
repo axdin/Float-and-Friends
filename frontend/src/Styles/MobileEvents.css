@@ -1,5 +1,6 @@
 .MobileEventsPage {
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -13,32 +14,10 @@
 }
 
 .MobileEventContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     height: 90%;
     width: 90%;
 }
 
-.MobileEventsButtonRow{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    height: 14%;
-    width: 100%
-}
-
-.ShuffleEventButton {
-    height: 100%;
-    width: 40%;
-    background: transparent;
-    border: none;
-}
-
-.ShuffleEventButtonImg {
-    height: 90%;
-}
-
-.ShuffleButtonPlaceholder {
-    height: 100%;
-    width: 40%;
-    background: transparent;
-    border: none;
-}
