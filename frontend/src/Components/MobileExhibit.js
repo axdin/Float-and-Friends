@@ -5,9 +5,6 @@ import ExhibitIcon from "./ExhibitIcon";
 
 import loveLetter from "../Assets/Exhibits/LoveLetterExhibitIcon.png";
 
-import nextButton from "../Assets/Icons/NextButton.png";
-import prevButton from "../Assets/Icons/PrevButton.png";
-
 import "../Styles/MobileExhibit.css";
 
 function MobileExhibit() {
@@ -18,17 +15,11 @@ function MobileExhibit() {
         setExhibits([
             {
                 title: "Love Letters to a Friend",
-                icon: loveLetter
+                icon: loveLetter,
+                suffix: "LoveLetters"
             }
         ])
     }, [])
-    
-    const increment = () => {
-        setExhibitIndex(exhibitIndex + 1);
-    }
-    const decrement = () => {
-        setExhibitIndex(exhibitIndex - 1);
-    }
 
     return (
         <div className="MobileExhibitPage">
@@ -38,19 +29,12 @@ function MobileExhibit() {
             { exhibits.length > 0 &&
                 <div className="MobileExhibitContainer">
                     <div className="CurrentExhibitContainer">
-                        <ExhibitIcon exhibit={exhibits[exhibitIndex]} size={250}/>
+                        <ExhibitIcon exhibit={exhibits[exhibitIndex]} fullSize={true}/>
                     </div>
-                    <div className="MobileExhibitButtonRow">
-                        { exhibitIndex > 0 && 
-                            <button className="ShuffleExhibitButton" onClick={decrement}>
-                                <img className="ShuffleExhibitButtonImg" src={prevButton}/>
-                            </button>
-                        }
-                        { exhibitIndex < exhibits.length && 
-                            <button className="ShuffleExhibitButton" onClick={increment}>
-                                <img className="ShuffleExhibitButtonImg" src={nextButton}/>
-                            </button>
-                        }
+                    <div className="AllExhibitsContainer">
+                        {exhibits.map((exhibit, index) => {
+                            return( <ExhibitIcon exhibit={exhibit} fullSize={false} setExhibit={() => setExhibitIndex(index)}/> )
+                        })}
                     </div>
                 </div>
             }
